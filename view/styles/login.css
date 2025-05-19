@@ -1,0 +1,75 @@
+main{
+    width: 99vw;
+    height: 98vh;
+    background-color: aqua;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.section_login{
+    width: 50vw;
+    height: 50vh;
+    background-color: rgb(52, 37, 117);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.logar{
+    width: 50vw;
+    height: 30vh;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* empilha .input e o botão */
+
+    padding: 2vh;
+}
+
+.input{
+    background-color: cornflowerblue;
+    height: 8vh;
+    width: 20vw;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#nome_usuario{
+    height: 40%;
+    width: 70%;
+    border-radius: 0.5vw;
+}
+
+#usuario_senha{
+    height: 40%;
+    width: 70%;
+    border-radius: 0.5vw;
+}
+
+#telefone_usuario{
+    height: 40%;
+    width: 70%;
+    border-radius: 0.5vw;
+}
+
+.botao_acessar{
+    height: 20vh;
+    width: 20vw;
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#botao_entrar{
+    height: 60%;
+    width: 50%;
+    border-radius: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
