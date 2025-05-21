@@ -1,6 +1,6 @@
 main{
-    width: 99vw;
-    height: 98vh;
+    width: 98vw;
+    height: 97vh;
     background-color: aqua;
     align-items: center;
     display: flex;
@@ -19,7 +19,6 @@ main{
 .logar{
     width: 50vw;
     height: 30vh;
-    background-color: brown;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +29,7 @@ main{
 
 .input{
     background-color: cornflowerblue;
-    height: 8vh;
+    height: 12vh;
     width: 20vw;
     flex-direction: column;
     display: flex;
@@ -57,17 +56,16 @@ main{
 }
 
 .botao_acessar{
-    height: 20vh;
+    height: 24vh;
     width: 20vw;
-    background-color: coral;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 #botao_entrar{
-    height: 60%;
-    width: 50%;
+    height: 90%;
+    width: 60%;
     border-radius: 0.5vw;
     display: flex;
     align-items: center;
