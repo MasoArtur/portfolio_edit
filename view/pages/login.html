@@ -62,6 +62,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SLA</title>
     <link rel="stylesheet" href="./../styles/login.css">
+    <script src="./../../controller/login_controller.js"></script>
 </head>
 <body>
     <main>
@@ -69,20 +70,16 @@
             <div class="logar">
                 <form action="" method="get">
                     <div class="input">
-                        <label for="">nome</label>
+                        <label for="nome_usuario">nome</label>
                         <input type="text" id="nome_usuario" >
                     </div>
                     <div class="input">
-                        <label for="">senha</label>
+                        <label for="usuario_senha">senha</label>
                         <input type="password" id="usuario_senha">
-                    </div>
-                    <div class="input">
-                        <label for="">telefone</label>
-                        <input type="tel" id="telefone_usuario">
                     </div>
                 </form>
                 <div class="botao_acessar">
-                    <button id="botao_entrar">
+                    <button id="botao_entrar" type="button">
                         <p>Entrar</p>
                         <i></i>
                     </button>
