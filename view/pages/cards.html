@@ -1,84 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cards</title>
+    <script src="https://kit.fontawesome.com/b39bb922a1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./../styles/cards.css">
 </head>
 <body>
     <header>
         <div id="cards">
-            <div class="cards">
-                <img src="" alt="">
-                <h1></h1>
-                <p></p>
+            <div class="cards" id="">
+                <i class="fa-solid fa-image"></i>
+                <h1>título</h1>
+                <p>descrição</p>
             </div>
-            <div class="cards">
-                <img src="" alt="">
-                <h1></h1>
-                <p></p>
+            <div class="cards" id="">
+                <i class="fa-solid fa-image"></i>
+                <h1>título</h1>
+                <p>descrição</p>
             </div>
-            <div class="cards">
-                <img src="" alt="">
-                <h1></h1>
-                <p></p> 
+            <div class="cards" id="">
+                <i class="fa-solid fa-image"></i>
+                <h1>título</h1>
+                <p>descrição</p>
             </div>
-            <div class="cards">  
-                <img src="" alt="">
-                <h1></h1>
-                <p></p>
+            <div class="cards" id="">  
+                <i class="fa-solid fa-image"></i>
+                <h1>título</h1>
+                <p>descrição</p>
             </div>
-            <div class="cards">  
-                <img src="" alt="">
-                <h1></h1>
-                <p></p>
+            <div class="cards" id="">  
+                <i class="fa-solid fa-image"></i>
+                <h1>título</h1>
+                <p>descrição</p>
             </div>
-            <div class="cards">  
-                <img src="" alt="">
-                <h1></h1>
-                <p></p>
+            <div class="cards" id="">  
+                <i class="fa-solid fa-image"></i>
+                <h1>título</h1>
+                <p>descrição</p>
             </div>
-            <div class="cards">  
-                <img src="" alt="">
-                <h1></h1>
-                <p></p>
+            <div class="cards" id="">  
+                <i class="fa-solid fa-image"></i>
+                <h1>título</h1>
+                <p>descrição</p>
             </div>
-            <div class="cards">  
-                <img src="" alt="">
-                <h1></h1>
-                <p></p>
+            <div class="cards" id="">  
+                <i class="fa-solid fa-image"></i>
+                <h1>título</h1>
+                <p>descrição</p>
             </div>
         </div>
     </header>
     <main>
-        <section>
-            <div>
-                <h1></h1>
-            </div>
-            <form action="" method="get">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-            </form>
-        </section>
-        <section>
-            <div>
-                <h1></h1>
-                <form action="" method="get">
-                    <input type="text">
-                </form>
-            </div>
-        </section>
-        <section>
-            <h1></h1>
-            <div>
+        <section id="todos_forms">
 
-            </div>
-            <form action="" method="get">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
+            <form class="forms" action="" id="cadastro_form">
+                <h1>Cadastre-se</h1>
+
+                <label for="name">Escreva seu nome</label>
+                <input type="text" class="input_name">
+
+                <label for="">digite seu CPF</label>
+                <input type="number">
+                <label for="">Digite seu número</label>
+                <input type="tel">
+                <label for="">Digite seu email</label>
+                <input type="email">
+                <!-- cpf
+                telefone
+                email -->
+
+            </form>
+            <form class="forms" action="" id="delete_form">
+                <h1>Deletar</h1>
+                <label for="">Oque deseja excluir?</label>
+                <input type="text" class="input_name">
+                <button id="enviar">Enviar</button>
+
+            </form>
+            <form class="forms" action="" id="att_form">
+                <h1>Atualizar</h1>
+                <label for="">Novo Nome</label>
+                <input type="text" class="input_name">
+
+                <label for="">Escreva seu nvo CPF</label>
+                <input type="number">
+                <label for="">Escreva seu novo telefone</label>
+                <input type="tel">
+                <label for="">Escreva seu novo email</label>
+                <input type="email">
+                <!-- novo nome
+                novo telefone
+                novo email
+                outro cpf -->
+
+
             </form>
         </section>
     </main>
