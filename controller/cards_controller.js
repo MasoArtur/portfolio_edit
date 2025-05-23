@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('cadastro_form').addEventListener('submit', (event)=>{
