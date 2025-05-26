@@ -1,4 +1,4 @@
-async function getBdCardsProjects(){
+export async function getBdCardsProjects(){
     try{
         const response = await fetch('http://localhost:3000/projetos')
         const dados = await response.json();
@@ -9,7 +9,7 @@ async function getBdCardsProjects(){
     }   
 };
 
-async function postBdCardsProjects(titulo, preco, img){
+export async function postBdCardsProjects(titulo, preco, img){
     try{
         const response = await fetch('http://localhost:3000/projetos',
         {
@@ -18,14 +18,59 @@ async function postBdCardsProjects(titulo, preco, img){
                 'Content-Type' : 'application/json'
             },
                 body: JSON.stringify({
-                    id: id,
+                    titulo: titulo,
+                    preco: preco,
+                    img: img,
             })
         }
     );
     //COLOCAR CONST
-
+        const dados = await response.json();
+        alert(dados.response);
     }
     catch(e){
         console.log(`ERRO: ${e}`)
+    }
+};
+
+
+export async function deleteBdCardsProjects(id){
+    try{
+        const response = await fetch('http://localhost:3000/projetos',
+            {
+            method: "Delete",
+            headers:{
+                'Content-Type' : 'application/json'
+            },
+                body: JSON.stringify({
+                    id: id,
+            })
+        }
+    );
+    const dados = await response.json();
+    alert(dados.response);
+    }catch(e){
+        console.log(`ERRO: ${e}`);
+    }
+};
+
+export async function putBdCardsProjects(id, titulo, preco, img){
+    try{
+        const response = await fetch('http://localhost:3000/projetos',
+           {
+            method: "Put",
+            headers:{
+                'Content-Type' : 'application/json'
+                },
+                body: JSON.stringify({
+                    id: id,
+                    titulo: titulo,
+                    preco: preco,
+                    img: img,
+                })
+            }  
+        )
+    }catch(e){
+        alert(`ERRO: ${e}`);
     }
 };

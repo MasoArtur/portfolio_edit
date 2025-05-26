@@ -1,27 +1,29 @@
+import { getBdCardsProjects } from "../../services/cards_services.js";
 
+export async function createCards(){
+    let section_cards = document.getElementById('cards');
+    section_cards.innerHTML = "";
 
-function createCardsComida(){
-    let cards_comida = document.getElementById('cards');
-    cards_comida.innerHTML = "";
+    const bd_cards_projetos = await getBdCardsProjects();
 
-    for(let i = 0; i > nome.length; i++){
+    bd_cards_projetos.map((card_bd, index) => {
 
-    let cards = document.createElement('div');
-    cards.className = 'card_comida';
+        let cards = document.createElement('div');
+        cards.className = 'card_comida';
 
-    let img_card = document.createElement('img');
-    img_card.className = 'img_card'
+        let img_card = document.createElement('img');
+        img_card.src = card_bd.img;
 
-    let nome_comida = document.createElement('h1');
-    nome_comida.textContent = 'titulo_card';
-    
-    let tipo_comida = document.createElement('p');
-    tipo_comida.textContent = "descricao_card";
+        let titulo_card = document.createElement('h1');
+        titulo_card.textContent = card_bd.titulo;
+        
+        let preco_card = document.createElement('p');
+        preco_card.textContent = card_bd.preco;
 
-    cards.appendChild(img_card);
-    cards.appendChild(nome_comida);
-    cards.appendChild(tipo_comida);
-    cards_comida.appendChild(cards);
+        cards.appendChild(img_card);
+        cards.appendChild(titulo_card);
+        cards.appendChild(preco_card);
 
-    };
+        section_cards.appendChild(cards);
+    });
 }

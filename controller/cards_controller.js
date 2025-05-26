@@ -45,5 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`nomeatt: ${novo_nome}, cpfatt: ${novo_cpf}, telefoneatt: ${novo_telefone}, emailatt: ${novo_email}`);
     }
   });
-
+  
 });
