@@ -1,7 +1,7 @@
 export async function getBdCardsProjects(){
     try{
         const response = await fetch('http://localhost:3000/projetos')
-        const dados = await response.json();
+        const dados = await response.json(); // o response.json serve para transformar a resposta estranha no formato JSON 
         return dados;
 
     }catch(e){
@@ -17,7 +17,7 @@ export async function postBdCardsProjects(titulo, preco, img){
             headers:{
                 'Content-Type' : 'application/json'
             },
-                body: JSON.stringify({
+                body: JSON.stringify({ // o corpo do que vem é convertido para Json
                     titulo: titulo,
                     preco: preco,
                     img: img,
@@ -62,14 +62,16 @@ export async function putBdCardsProjects(id, titulo, preco, img){
             headers:{
                 'Content-Type' : 'application/json'
                 },
-                body: JSON.stringify({
+                body: JSON.stringify({ // transforma objetos JS em texto JSON
                     id: id,
                     titulo: titulo,
                     preco: preco,
                     img: img,
                 })
-            }  
-        )
+            },  
+        );
+        const dados = await response.json();// sempre colocar entre paarenteses o JSON, para o "AWAIT" ter efeito
+        dados(response.json);
     }catch(e){
         alert(`ERRO: ${e}`);
     }

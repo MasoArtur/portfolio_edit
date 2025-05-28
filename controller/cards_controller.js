@@ -1,8 +1,11 @@
-
+import { createCards } from "../view/js/create_cards.js";
+import { postBdCardsProjects, deleteBdCardsProjects, putBdCardsProjects } from "../services/cards_services.js";
 
 document.addEventListener('DOMContentLoaded', () => {
+  createCards();
+});
 
-  document.getElementById('cadastro_form').addEventListener('submit', (event)=>{
+  document.getElementById('cadastro_form').addEventListener('submit', async(event)=>{
     event.preventDefault()
 
     const name_cadastro = document.getElementById('nome_cadastro').value;
@@ -13,12 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if(!name_cadastro || !cpf_cadastro || !tel_cadastro || !email_cadastro){
         alert("Algo de errado, não está certo");
     }else{
-        alert(`nome: ${name_cadastro}, cpf: ${cpf_cadastro}, telefone: ${tel_cadastro}, email: ${email_cadastro}`);
+        await postBdCardsProjects(name_cadastro, cpf_cadastro, tel_cadastro, email_cadastro);
+        createCards();
     }
   });
 
 
-  document.getElementById('delete_form').addEventListener('submit', (event)=>{
+  document.getElementById('delete_form').addEventListener('submit', async (event)=>{
     event.preventDefault()
 
     const delete_algo = document.getElementById('deletar_algo').value;
@@ -26,24 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if(!delete_algo){
         alert("Algo de errado, não está certo");
     }else{
-        alert(`deletou isso: ${delete_algo}`);
+        await deleteBdCardsProjects(delete_algo);
+        createCards();
     }
   });
-
-
-  document.getElementById('att_form').addEventListener('submit', (event)=>{
+  
+  document.getElementById('att_form').addEventListener('submit', async (event)=>{
     event.preventDefault()
 
     const novo_nome = document.getElementById('novo_nome').value;
     const novo_cpf = document.getElementById('novo_cpf').value;
     const novo_telefone = document.getElementById('novo_telefone').value;
     const novo_email = document.getElementById('novo_email').value;
+    const id_att = document.getElementById('novo_id').value
 
-    if(!novo_nome || !novo_cpf || !novo_telefone || !novo_email){
+    if(!novo_nome || !novo_cpf || !novo_telefone || !novo_email || !id_att){
         alert("Algo de errado, não está certo");
     }else{
-        alert(`nomeatt: ${novo_nome}, cpfatt: ${novo_cpf}, telefoneatt: ${novo_telefone}, emailatt: ${novo_email}`);
+        await putBdCardsProjects(novo_nome, novo_cpf, novo_telefone, novo_email, id_att);
     }
   });
   
-});
