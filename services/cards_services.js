@@ -1,7 +1,7 @@
 export async function getBdCardsProjects(){
     try{
         const response = await fetch('http://localhost:3000/projetos')
-        const dados = await response.json(); // o response.json serve para transformar a resposta estranha no formato JSON 
+        const dados = await response.json(); // o response.json serve para transformar a resposta estranha no formato JSON
         return dados;
 
     }catch(e){
