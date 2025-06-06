@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (senha === senhaCorreta) {
       alert(`Senha Correta, senha: ${senhaCorreta}`);
       console.log("acertou");
+
+      window.location.href = './../pages/cards.html'
     } else {
       alert("Para de tentar roubar os outros, vagabudo");
       console.log("errou");
