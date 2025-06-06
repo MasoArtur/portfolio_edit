@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert(`Senha Correta, senha: ${senhaCorreta}`);
       console.log("acertou");
 
-      window.location.href = './../pages/cards.html'; // se acertar irá para a outra página
+      window.location.href = './../cards.html'; // se acertar irá para a outra página
     } else {
       alert("Para de tentar roubar os outros, vagabudo");
       console.log("errou");
