@@ -1,6 +1,6 @@
 export async function getBdCardsProjects(){
     try{
-        const response = await fetch('http://localhost:3000/projetos')
+        const response = await fetch('https://back-end-portf-bu8g6dow1-masoarturs-projects.vercel.app/api')
         const dados = await response.json(); // o response.json serve para transformar a resposta estranha no formato JSON
         return dados;
 
@@ -11,7 +11,7 @@ export async function getBdCardsProjects(){
 
 export async function postBdCardsProjects(titulo, preco, img){
     try{
-        const response = await fetch('http://localhost:3000/projetos',
+        const response = await fetch('https://back-end-portf-bu8g6dow1-masoarturs-projects.vercel.app/api',
         {
             method: "Post",
             headers:{
@@ -36,7 +36,7 @@ export async function postBdCardsProjects(titulo, preco, img){
 
 export async function deleteBdCardsProjects(id){
     try{
-        const response = await fetch('http://localhost:3000/projetos',
+        const response = await fetch('https://back-end-portf-bu8g6dow1-masoarturs-projects.vercel.app/api',
             {
             method: "Delete",
             headers:{
@@ -56,7 +56,7 @@ export async function deleteBdCardsProjects(id){
 
 export async function putBdCardsProjects(id, titulo, preco, img){
     try{
-        const response = await fetch('http://localhost:3000/projetos',
+        const response = await fetch('https://back-end-portf-bu8g6dow1-masoarturs-projects.vercel.app/api',
            {
             method: "Put",
             headers:{
