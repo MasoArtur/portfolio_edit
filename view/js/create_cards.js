@@ -1,5 +1,6 @@
 import { getBdCardsProjects } from "../../services/cards_services.js";
 
+
 export async function createCards(){
     let section_cards = document.getElementById('cards');
     section_cards.innerHTML = "";

@@ -1,19 +1,23 @@
+const apiUrl = "https://back-end-portf-bu8g6dow1-masoarturs-projects.vercel.app/api";
+
 export async function getBdCardsProjects(){
     try{
-        const response = await fetch('https://back-end-portf-bu8g6dow1-masoarturs-projects.vercel.app/api')
+        const response = await fetch(apiUrl)
         const dados = await response.json(); // o response.json serve para transformar a resposta estranha no formato JSON
+        console.log("API:", dados);  
         return dados;
 
-    }catch(e){
-        console.log(`ERRO: ${e}`)
-    }   
+    }catch(e){  
+        console.log(`ERRO: ${e}`)    
+// O ERRO PROVAVELMENTE ESTA POR AQUI, O FETCH NÃO ESTA INDO
+    }       
 };
 
 export async function postBdCardsProjects(titulo, preco, img){
     try{
-        const response = await fetch('https://back-end-portf-bu8g6dow1-masoarturs-projects.vercel.app/api',
+        const response = await fetch(apiUrl,
         {
-            method: "Post",
+            method: "POST",
             headers:{
                 'Content-Type' : 'application/json'
             },
@@ -36,9 +40,9 @@ export async function postBdCardsProjects(titulo, preco, img){
 
 export async function deleteBdCardsProjects(id){
     try{
-        const response = await fetch('https://back-end-portf-bu8g6dow1-masoarturs-projects.vercel.app/api',
+        const response = await fetch(apiUrl,
             {
-            method: "Delete",
+            method: "DELETE",
             headers:{
                 'Content-Type' : 'application/json'
             },
@@ -56,9 +60,9 @@ export async function deleteBdCardsProjects(id){
 
 export async function putBdCardsProjects(id, titulo, preco, img){
     try{
-        const response = await fetch('https://back-end-portf-bu8g6dow1-masoarturs-projects.vercel.app/api',
+        const response = await fetch(apiUrl,
            {
-            method: "Put",
+            method: "PUT",
             headers:{
                 'Content-Type' : 'application/json'
                 },
