@@ -1,4 +1,4 @@
-const apiUrl = "https://back-end-portf-bu8g6dow1-masoarturs-projects.vercel.app/api";
+const apiUrl = "https://back-end-portf-lio.vercel.app/api";
 
 export async function getBdCardsProjects(){
     try{
