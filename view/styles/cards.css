@@ -67,3 +67,56 @@ body{
     border-radius: 1vh;
     font-size: 3vh;
 }
+
+.img_card{
+    width: 5vw;
+    height: 7vh;
+}
+
+.titulo_card{
+    font-size: 2.5vh;
+}
+
+.preco_card{
+    font-size: 2vh;
+    color: rgb(145, 175, 202);
+}
+
+.divBtns{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btnDeletar{
+    width: 3vh;
+    height: 3vh;   
+    background-color: brown;
+    color: brown;
+    border-radius: 2vw;
+}
+
+.btnAtualizar{
+    width: 3vh;
+    height: 3vh;
+    border-radius: 2vw;
+    background-color: darkseagreen;
+    color: darkseagreen;
+}
+
+.btnDeletar i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 2vh;
+}
+
+.btnAtualizar i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 2vh;
+}

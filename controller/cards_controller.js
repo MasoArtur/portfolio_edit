@@ -8,46 +8,48 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('cadastro_form').addEventListener('submit', async(event)=>{
     event.preventDefault()
 
-    const name_cadastro = document.getElementById('nome_cadastro').value;
-    const cpf_cadastro = document.getElementById('cpf_cadastro').value;
-    const tel_cadastro = document.getElementById('telefone_cadastro').value;
-    const email_cadastro = document.getElementById('email_cadastro').value;
+    const img_cadastro = document.getElementById('imagem_cadastro').value
+    const name_cadastro = document.getElementById('titulo_cadastro').value;
+    const preco_cadastro = document.getElementById('preco_cadastro').value;
+    // const tel_cadastro = document.getElementById('telefone_cadastro').value;
+    // const email_cadastro = document.getElementById('email_cadastro').value;
 
-    if(!name_cadastro || !cpf_cadastro || !tel_cadastro || !email_cadastro){
+    if(!img_cadastro || !name_cadastro || !preco_cadastro /*|| !tel_cadastro || !email_cadastro*/){
         alert("Algo de errado, não está certo");
     }else{
-        await postBdCardsProjects(name_cadastro, cpf_cadastro, tel_cadastro, email_cadastro);
+        await postBdCardsProjects(img_cadastro, name_cadastro, preco_cadastro,/*  tel_cadastro,email_cadastro*/);
         createCards();
     }
   });
 
 
-  document.getElementById('delete_form').addEventListener('submit', async (event)=>{
-    event.preventDefault()
+  // document.getElementById('delete_form').addEventListener('submit', async (event)=>{
+  //   event.preventDefault()
 
-    const delete_algo = document.getElementById('deletar_algo').value;
+  //   const delete_algo = document.getElementById('deletar_algo').value;
 
-    if(!delete_algo){
-        alert("Algo de errado, não está certo");
-    }else{
-        await deleteBdCardsProjects(delete_algo);
-        createCards();
-    }
-  });
+  //   if(!delete_algo){
+  //       alert("Algo de errado, não está certo");
+  //   }else{
+  //       await deleteBdCardsProjects(delete_algo);
+  //       createCards();
+  //   }
+  // });
   
   document.getElementById('att_form').addEventListener('submit', async (event)=>{
     event.preventDefault()
 
     const novo_nome = document.getElementById('novo_nome').value;
     const novo_cpf = document.getElementById('novo_cpf').value;
-    const novo_telefone = document.getElementById('novo_telefone').value;
-    const novo_email = document.getElementById('novo_email').value;
     const id_att = document.getElementById('novo_id').value
+    const img_att = document.getElementById('imagem_att').value
 
-    if(!novo_nome || !novo_cpf || !novo_telefone || !novo_email || !id_att){
+
+    if(!novo_nome || !novo_cpf || !id_att || !img_att){
         alert("Algo de errado, não está certo");
     }else{
-        await putBdCardsProjects(novo_nome, novo_cpf, novo_telefone, novo_email, id_att);
+        await putBdCardsProjects(id_att, novo_nome, novo_cpf, img_att);
+        createCards();
     }
   });
   
